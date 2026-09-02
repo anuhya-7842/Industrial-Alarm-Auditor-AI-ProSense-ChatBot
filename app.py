@@ -15,7 +15,7 @@ TOKENIZER_NAME = "gpt2"
 tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_NAME)
 
 # Initialize Client
-client = genai.Client(api_key="AIzaSyCEe7YoCHjUNjuImDBTO4umy9YWiKMau3Q")
+client = genai.Client(api_key="YOUR_API_KEY_HERE")
 
 # =====================================================================
 # MULTI-DASHBOARD DATA FILTERING ENGINE
