@@ -2,6 +2,10 @@
 
 A Flask-based REST API that generates AI-powered audit reports for industrial alarm management dashboards (Summary, Analysis, Sequence of Events, and KPI views) using Google's Gemini model.
 
+### Internship
+
+This project was developed as part of my internship at **Jaaji Technologies** (May – July).
+
 ### Overview
 
 This service accepts raw alarm/dashboard JSON payloads from an alarm management system (e.g. `inSisProSense/AlarmManagement`), filters and shapes the data based on the requested dashboard type, sends it to a Gemini model with a role-specific engineering prompt, and returns a structured Markdown audit report.
@@ -11,7 +15,7 @@ This service accepts raw alarm/dashboard JSON payloads from an alarm management 
 - **Multi-dashboard support** — routes data through dedicated filters for four dashboard profiles:
   - `summary` — Executive alarm metrics, top assets, and event log
   - `analysis` — Bad actors, chattering alarms, severity distribution
-  - `soe` — Sequence of Events
+  - `soe` — Sequence of Events / cascading trip analysis
   - `kpi` — Shift performance, response times, unacknowledged alarm backlog
   - `alarm_kpi` — Combined pass-through profile
 - **Token-aware ingestion** — uses a Hugging Face tokenizer (`gpt2` base) to measure payload size and reject requests exceeding a configurable context window (default: 30,000 tokens)
